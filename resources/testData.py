@@ -18,3 +18,7 @@ PASSWORD_REQUIRED = "Epic sadface: Password is required"
 
 HIGHEST_REAL = "$49.99"
 LOWEST_REAL = "$7.99"
+
+FIRST_NAME = "Sarvar"
+LAST_NAME = "Johns"
+POSTAL_CODE = "050000"

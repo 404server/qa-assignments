@@ -4,7 +4,9 @@ Documentation    Keywords для логина на сайт
 *** Keywords ***
 Login To site
     [Arguments]    ${USERNAME}=${STANDARD_USER}    ${PASSWORD}=${PASSWORD}
-    Open Browser    ${BASE_URL}    chrome
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --incognito
+    Open Browser    ${BASE_URL}    chrome    options=${options}
     Input Text      id=user-name     ${USERNAME}
     Input Text      id=password      ${PASSWORD}
     Click Button    id=login-button
@@ -29,5 +31,9 @@ Reset app state
     Click Element    xpath=//*[@id="react-burger-menu-btn"]
 
     Wait Until Element Is Visible    xpath=//*[@id="reset_sidebar_link"]    timeout=10s
-    Wait Until Element Is Enabled    xpath=//*[@id="reset_sidebar_link"]    timeout=10s
     Click Element    xpath=//*[@id="reset_sidebar_link"]
+
+    Wait Until Element Is Visible    xpath=//*[@id="react-burger-cross-btn"]    timeout=5s
+    Click Element    xpath=//*[@id="react-burger-cross-btn"]
+
+    Reload Page
