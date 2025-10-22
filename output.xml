@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.2 on darwin)" generated="2025-10-22T16:49:38.500609" rpa="false" schemaversion="5">
+<suite id="s1" name="Qa" source="/Users/sarvarsaidazov/PycharmProjects/qa">
+<suite id="s1-s1" name="testCases" source="/Users/sarvarsaidazov/PycharmProjects/qa/testCases">
+<suite id="s1-s1-s1" name="Test" source="/Users/sarvarsaidazov/PycharmProjects/qa/testCases/test.robot">
+<test id="s1-s1-s1-t1" name="Login Successful" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:38.604318" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T16:49:38.604170" elapsed="8.681957"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:47.290228" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${STANDARD_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:47.288793" elapsed="0.186300"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:47.475489" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:47.475298" elapsed="0.030320"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:47.505960" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:47.505787" elapsed="0.067572"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:47.578906" level="INFO">Current page contains element 'class=product_sort_container'.</msg>
+<arg>class=product_sort_container</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-10-22T16:49:47.573589" elapsed="0.005383"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T16:49:47.579151" elapsed="0.076034"/>
+</kw>
+<status status="PASS" start="2025-10-22T16:49:38.603715" elapsed="9.052003"/>
+</test>
+<test id="s1-s1-s1-t2" name="Password is incorrect" line="15">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:47.656361" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T16:49:47.656141" elapsed="7.408021"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:55.066481" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${STANDARD_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:55.065537" elapsed="0.110279"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:55.176408" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${INCORRECT_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:55.176133" elapsed="0.029506"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:55.209112" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:55.207585" elapsed="0.034937"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:55.257560" level="INFO">${error_text} = Epic sadface: Username and password do not match any user in this service</msg>
+<var>${error_text}</var>
+<arg>xpath=//*[@id="login_button_container"]/div/form/div[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:55.242757" elapsed="0.014832"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${INCORRECT_PASSWORD_ERROR}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-22T16:49:55.257748" elapsed="0.000156"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T16:49:55.257967" elapsed="0.109008"/>
+</kw>
+<status status="PASS" start="2025-10-22T16:49:47.655916" elapsed="7.711537"/>
+</test>
+<test id="s1-s1-s1-t3" name="User locked" line="25">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:55.369342" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-22T16:49:55.368966" elapsed="3.222656"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:58.596232" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${LOCKED_OUT_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:58.594671" elapsed="0.107339"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:58.702341" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:58.702159" elapsed="0.040644"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:58.743169" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:58.742979" elapsed="0.034765"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-10-22T16:49:58.790158" level="INFO">${error_text} = Epic sadface: Sorry, this user has been locked out.</msg>
+<var>${error_text}</var>
+<arg>xpath=//*[@id="login_button_container"]/div/form/div[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-22T16:49:58.777904" elapsed="0.012284"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${error_text}</arg>
+<arg>${LOCKED_OUT_USER_ERROR}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-10-22T16:49:58.790342" elapsed="0.000155"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-22T16:49:58.790560" elapsed="0.072365"/>
+</kw>
+<status status="PASS" start="2025-10-22T16:49:55.368313" elapsed="3.494745"/>
+</test>
+<status status="PASS" start="2025-10-22T16:49:38.522556" elapsed="20.340931"/>
+</suite>
+<status status="PASS" start="2025-10-22T16:49:38.522192" elapsed="20.341642"/>
+</suite>
+<status status="PASS" start="2025-10-22T16:49:38.514391" elapsed="20.349608"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Qa" id="s1" pass="3" fail="0" skip="0">Qa</stat>
+<stat name="testCases" id="s1-s1" pass="3" fail="0" skip="0">Qa.testCases</stat>
+<stat name="Test" id="s1-s1-s1" pass="3" fail="0" skip="0">Qa.testCases.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
