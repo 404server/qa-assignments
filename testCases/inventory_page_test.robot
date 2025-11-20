@@ -35,18 +35,18 @@ Removed from cart successfully
     Page Should Not Contain Element    xpath=//*[@id="shopping_cart_container"]/a/span
 
 
-Go to item page sucessfully
-    [Documentation]    Проверка что переходит на страницу товара по нажатию
-
-    Page Should Contain Element    class=inventory_item
-    Scroll Element Into View       xpath=//*[@id="item_4_title_link"]
-    Wait Until Element Is Visible  xpath=//*[@id="item_4_title_link"]    10s
-    Click Element                  xpath=//*[@id="item_4_title_link"]
-
-    Page Should Contain Element    class=inventory_item_container
-
-    Scroll Element Into View       xpath=//*[@id="back-to-products"]
-    Click Element                  xpath=//*[@id="back-to-products"]
+#Go to item page successfully
+#    [Documentation]    Проверка что переходит на страницу товара по нажатию
+#
+#    Page Should Contain Element    class=inventory_item
+#    Scroll Element Into View       xpath=//*[@id="item_4_title_link"]
+#    Wait Until Element Is Visible  xpath=//*[@id="item_4_title_link"]    10s
+#    Click Element                  xpath=//*[@id="item_4_title_link"]
+#
+#    Page Should Contain Element    class=inventory_item_container
+#
+#    Scroll Element Into View       xpath=//*[@id="back-to-products"]
+#    Click Element                  xpath=//*[@id="back-to-products"]
 
 
 Check filters

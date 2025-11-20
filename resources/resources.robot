@@ -4,9 +4,7 @@ Documentation    Keywords для логина на сайт
 *** Keywords ***
 Login To site
     [Arguments]    ${USERNAME}=${STANDARD_USER}    ${PASSWORD}=${PASSWORD}
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --incognito
-    Open Browser    ${BASE_URL}    chrome    options=${options}
+    Open Browser    ${BASE_URL}    chrome
     Input Text      id=user-name     ${USERNAME}
     Input Text      id=password      ${PASSWORD}
     Click Button    id=login-button
