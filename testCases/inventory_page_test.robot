@@ -36,14 +36,17 @@ Removed from cart successfully
 
 
 Go to item page sucessfully
-    [Documentation]    Проверка что пепреходжит на страницу товара по нажатию
+    [Documentation]    Проверка что переходит на страницу товара по нажатию
 
     Page Should Contain Element    class=inventory_item
-    Click Link    xpath=//*[@id="item_4_title_link"]
+    Scroll Element Into View       xpath=//*[@id="item_4_title_link"]
+    Wait Until Element Is Visible  xpath=//*[@id="item_4_title_link"]    10s
+    Click Element                  xpath=//*[@id="item_4_title_link"]
 
     Page Should Contain Element    class=inventory_item_container
 
-    Click Element    xpath=//*[@id="back-to-products"]
+    Scroll Element Into View       xpath=//*[@id="back-to-products"]
+    Click Element                  xpath=//*[@id="back-to-products"]
 
 
 Check filters

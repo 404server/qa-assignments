@@ -1,0 +1,271 @@
+<robot generator="Robot 6.1.1 (Python 3.9.6 on darwin)" generated="20251120 14:53:32.065" rpa="false" schemaversion="4">
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="1" skip="0" id="s1" name="testCases">testCases</stat>
+<stat pass="4" fail="1" skip="0" id="s1-s1" name="Inventory Page Test">testCases.Inventory Page Test</stat>
+</suite>
+</statistics>
+<suite name="Suites" id="s0"><suite id="s1-s1" name="Inventory Page Test Windows, 10, Firefox, 130.0" source="/Users/sarvarsadazov/PycharmProjects/qa-assignments/testCases/inventory_page_test.robot">
+<kw name="Login To site" library="resources" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20251120 14:53:32.099" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x110fcc6a0&gt;</msg>
+<status status="PASS" starttime="20251120 14:53:32.099" endtime="20251120 14:53:32.100" />
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20251120 14:53:32.100" endtime="20251120 14:53:32.100" />
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20251120 14:53:32.101" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20251120 14:53:32.212" level="INFO">Completed setup!</msg>
+<status status="PASS" starttime="20251120 14:53:32.100" endtime="20251120 14:53:53.651" />
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251120 14:53:53.656" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20251120 14:53:53.652" endtime="20251120 14:53:55.708" />
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20251120 14:53:55.714" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20251120 14:53:55.711" endtime="20251120 14:53:57.565" />
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20251120 14:53:57.573" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20251120 14:53:57.569" endtime="20251120 14:54:00.516" />
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<arg>inventory.html</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20251120 14:54:01.241" level="INFO">Current location contains 'inventory.html'.</msg>
+<status status="PASS" starttime="20251120 14:54:00.522" endtime="20251120 14:54:01.244" />
+</kw>
+<status status="PASS" starttime="20251120 14:53:32.098" endtime="20251120 14:54:01.246" />
+</kw>
+<test id="s1-s1-t1" name="Inventory Page shown successfully" line="9">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=inventory_list</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:01.974" level="INFO">Current page contains element 'class=inventory_list'.</msg>
+<status status="PASS" starttime="20251120 14:54:01.253" endtime="20251120 14:54:01.976" />
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=inventory_item_img</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:02.720" level="INFO">Current page contains element 'class=inventory_item_img'.</msg>
+<status status="PASS" starttime="20251120 14:54:01.977" endtime="20251120 14:54:02.722" />
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=inventory_item_description</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:03.444" level="INFO">Current page contains element 'class=inventory_item_description'.</msg>
+<status status="PASS" starttime="20251120 14:54:02.724" endtime="20251120 14:54:03.446" />
+</kw>
+<doc>&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072; &#1095;&#1090;&#1086; &#1089;&#1090;&#1072;&#1088;&#1085;&#1080;&#1094;&#1072; &#1086;&#1090;&#1086;&#1073;&#1088;&#1072;&#1078;&#1072;&#1077;&#1090;&#1089;&#1103; &#1085;&#1086;&#1088;&#1084;&#1072;&#1083;&#1100;&#1085;&#1086;</doc>
+<status status="PASS" starttime="20251120 14:54:01.249" endtime="20251120 14:54:03.447" />
+</test>
+<test id="s1-s1-t2" name="Addede to cart successfully" line="17">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=inventory_item</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:06.395" level="INFO">Current page contains element 'class=inventory_item'.</msg>
+<status status="PASS" starttime="20251120 14:54:05.601" endtime="20251120 14:54:06.397" />
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="add-to-cart-sauce-labs-onesie"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20251120 14:54:06.403" level="INFO">Clicking button 'xpath=//*[@id="add-to-cart-sauce-labs-onesie"]'.</msg>
+<status status="PASS" starttime="20251120 14:54:06.400" endtime="20251120 14:54:10.387" />
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=shopping_cart_link</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:11.128" level="INFO">Current page contains element 'class=shopping_cart_link'.</msg>
+<status status="PASS" starttime="20251120 14:54:10.390" endtime="20251120 14:54:11.132" />
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${amount}</var>
+<arg>xpath=//*[@id="shopping_cart_container"]/a/span</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20251120 14:54:12.525" level="INFO">${amount} = 1</msg>
+<status status="PASS" starttime="20251120 14:54:11.134" endtime="20251120 14:54:12.527" />
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${amount}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" starttime="20251120 14:54:12.528" endtime="20251120 14:54:12.529" />
+</kw>
+<doc>&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072; &#1095;&#1090;&#1086; &#1090;&#1086;&#1074;&#1072;&#1088; &#1076;&#1086;&#1073;&#1072;&#1074;&#1083;&#1103;&#1090;&#1089;&#1103; &#1074; &#1082;&#1086;&#1088;&#1079;&#1080;&#1085;&#1091;</doc>
+<status status="PASS" starttime="20251120 14:54:05.597" endtime="20251120 14:54:12.530" />
+</test>
+<test id="s1-s1-t3" name="Removed from cart successfully" line="28">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=inventory_item</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:15.050" level="INFO">Current page contains element 'class=inventory_item'.</msg>
+<status status="PASS" starttime="20251120 14:54:14.335" endtime="20251120 14:54:15.054" />
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=shopping_cart_link</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:15.826" level="INFO">Current page contains element 'class=shopping_cart_link'.</msg>
+<status status="PASS" starttime="20251120 14:54:15.057" endtime="20251120 14:54:15.826" />
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@id="remove-sauce-labs-onesie"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20251120 14:54:15.828" level="INFO">Clicking button 'xpath=//*[@id="remove-sauce-labs-onesie"]'.</msg>
+<status status="PASS" starttime="20251120 14:54:15.827" endtime="20251120 14:54:19.831" />
+</kw>
+<kw name="Page Should Not Contain Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="shopping_cart_container"]/a/span</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<msg timestamp="20251120 14:54:20.551" level="INFO">Current page does not contain element 'xpath=//*[@id="shopping_cart_container"]/a/span'.</msg>
+<status status="PASS" starttime="20251120 14:54:19.834" endtime="20251120 14:54:20.554" />
+</kw>
+<doc>&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072; &#1095;&#1090;&#1086; &#1090;&#1086;&#1074;&#1072;&#1088; &#1091;&#1076;&#1072;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#1080;&#1079; &#1082;&#1086;&#1088;&#1079;&#1080;&#1085;&#1099;</doc>
+<status status="PASS" starttime="20251120 14:54:14.332" endtime="20251120 14:54:20.555" />
+</test>
+<test id="s1-s1-t4" name="Go to item page sucessfully" line="38">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=inventory_item</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:23.167" level="INFO">Current page contains element 'class=inventory_item'.</msg>
+<status status="PASS" starttime="20251120 14:54:22.374" endtime="20251120 14:54:23.172" />
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="item_4_title_link"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20251120 14:54:23.174" endtime="20251120 14:54:24.739" />
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="item_4_title_link"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20251120 14:54:24.740" endtime="20251120 14:54:26.161" />
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="item_4_title_link"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20251120 14:54:26.165" level="INFO">Clicking element 'xpath=//*[@id="item_4_title_link"]'.</msg>
+<msg timestamp="20251120 14:54:38.261" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20251120 14:54:38.263" level="FAIL">ElementNotInteractableException: Message: Element &lt;a id="item_4_title_link" href="#"&gt; could not be scrolled into view; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:353:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:167:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
+</msg>
+<status status="FAIL" starttime="20251120 14:54:26.163" endtime="20251120 14:54:38.289" />
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=inventory_item_container</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="NOT RUN" starttime="20251120 14:54:38.289" endtime="20251120 14:54:38.290" />
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="back-to-products"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20251120 14:54:38.290" endtime="20251120 14:54:38.290" />
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="back-to-products"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20251120 14:54:38.290" endtime="20251120 14:54:38.291" />
+</kw>
+<doc>&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072; &#1095;&#1090;&#1086; &#1087;&#1077;&#1088;&#1077;&#1093;&#1086;&#1076;&#1080;&#1090; &#1085;&#1072; &#1089;&#1090;&#1088;&#1072;&#1085;&#1080;&#1094;&#1091; &#1090;&#1086;&#1074;&#1072;&#1088;&#1072; &#1087;&#1086; &#1085;&#1072;&#1078;&#1072;&#1090;&#1080;&#1102;</doc>
+<status status="FAIL" starttime="20251120 14:54:22.372" endtime="20251120 14:54:38.291">ElementNotInteractableException: Message: Element &lt;a id="item_4_title_link" href="#"&gt; could not be scrolled into view; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+ElementNotInteractableError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:353:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:167:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
+</status>
+</test>
+<test id="s1-s1-t5" name="Check filters" line="52">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class=product_sort_container</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20251120 14:54:40.992" level="INFO">Current page contains element 'class=product_sort_container'.</msg>
+<status status="PASS" starttime="20251120 14:54:40.243" endtime="20251120 14:54:40.994" />
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=product_sort_container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20251120 14:54:40.999" level="INFO">Clicking element 'class=product_sort_container'.</msg>
+<status status="PASS" starttime="20251120 14:54:40.996" endtime="20251120 14:54:42.777" />
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header_container"]/div[2]/div/span/select/option[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20251120 14:54:42.778" level="INFO">Clicking element 'xpath=//*[@id="header_container"]/div[2]/div/span/select/option[4]'.</msg>
+<status status="PASS" starttime="20251120 14:54:42.778" endtime="20251120 14:54:44.462" />
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${highest}</var>
+<arg>xpath=//*[@id="inventory_container"]/div/div[1]/div[2]/div[2]/div[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20251120 14:54:45.840" level="INFO">${highest} = $49.99</msg>
+<status status="PASS" starttime="20251120 14:54:44.465" endtime="20251120 14:54:45.842" />
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${lowest}</var>
+<arg>xpath=//*[@id="inventory_container"]/div/div[6]/div[2]/div[2]/div</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20251120 14:54:47.262" level="INFO">${lowest} = $7.99</msg>
+<status status="PASS" starttime="20251120 14:54:45.844" endtime="20251120 14:54:47.264" />
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${highest}</arg>
+<arg>${HIGHEST_REAL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20251120 14:54:47.266" endtime="20251120 14:54:47.268" />
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${lowest}</arg>
+<arg>${LOWEST_REAL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20251120 14:54:47.269" endtime="20251120 14:54:47.271" />
+</kw>
+<doc>&#1055;&#1088;&#1086;&#1074;&#1077;&#1088;&#1082;&#1072; &#1092;&#1080;&#1083;&#1100;&#1090;&#1088;&#1072; &#1087;&#1086; &#1094;&#1077;&#1085;&#1077;</doc>
+<status status="PASS" starttime="20251120 14:54:40.240" endtime="20251120 14:54:47.272" />
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20251120 14:54:49.331" endtime="20251120 14:54:51.253" />
+</kw>
+<status status="FAIL" starttime="20251120 14:53:32.073" endtime="20251120 14:54:51.256" />
+</suite>
+<status status="FAIL" starttime="20251120 14:53:32.073" endtime="20251120 14:54:51.256" />
+</suite><errors>
+</errors>
+</robot>

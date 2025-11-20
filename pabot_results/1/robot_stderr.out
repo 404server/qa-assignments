@@ -1,0 +1,4 @@
+/Users/sarvarsadazov/PyCharmMiscProject/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/sarvarsadazov/PyCharmMiscProject/.venv/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:1025: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  return self.get_screenshot_as_file(filename)

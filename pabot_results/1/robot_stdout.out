@@ -1,0 +1,23 @@
+2025-11-20T09:52:24Z [browserstack_sdk.__init__][INFO] - SDK run started with id: 754d64d5-1c4c-4005-a4d4-7d3311e67054
+2025-11-20T09:52:24Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-11-20T09:52:26Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
+==============================================================================
+testCases                                                                     
+==============================================================================
+testCases.Cart Test                                                           
+==============================================================================
+Inventory Page shown successfully :: Проверка cart                    2025-11-20T09:52:27Z [browserstack_sdk.__init__][INFO] - Completed setup!
+| PASS |
+------------------------------------------------------------------------------
+Check cart checkout                                                   2025-11-20T09:52:57Z [browserstack_sdk.__init__][INFO] - Completed setup!
+| PASS |
+------------------------------------------------------------------------------
+testCases.Cart Test                                                   | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+testCases                                                             | PASS |
+2 tests, 2 passed, 0 failed
+==============================================================================
+Output:  /Users/sarvarsadazov/PycharmProjects/qa-assignments/pabot_results/1/output.xml
+2025-11-20T09:53:39Z [browserstack_sdk.__init__][INFO] - Handling session close
+2025-11-20T09:53:39Z [browserstack_sdk.__init__][INFO] - All done!
