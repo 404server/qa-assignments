@@ -1,0 +1,32 @@
+Cart and Checkout Test Cases Description
+
+1) Inventory Page shown successfully – Checks that an item can be added to the cart and is displayed correctly.
+Steps:
+    Reset the app state.
+    Wait until inventory items are visible.
+    Wait until the “Add to cart” button for “Sauce Labs Backpack” is visible and enabled.
+    Click the “Add to cart” button.
+    Wait until the shopping cart link is visible.
+    Get the cart item count and verify it equals 1.
+    Get the name of the added item.
+    Click the shopping cart link.
+    Wait until the cart footer is visible.
+    Get the name of the item in the cart.
+    Verify that the name of the added item matches the name in the cart.
+Result: The item is successfully added to the cart, the cart counter updates correctly, and the correct item is displayed in the cart.
+
+2) Check cart checkout – Checks that the checkout process works and the item total matches the cart.
+Steps:
+    Reset the app state.
+    Wait until the “Add to cart” button for “Sauce Labs Backpack” is visible and enabled.
+    Click the “Add to cart” button.
+    Click the shopping cart link.
+    Capture a screenshot of the cart.
+    Get the price of the added item in the cart.
+    Verify that the checkout button is visible and click it.
+    Fill in the checkout form with first name, last name, and postal code.
+    Click the continue button.
+    Verify that the checkout summary page is visible.
+    Get the item total text from the summary page.
+    Verify that the item total matches the price from the cart.
+Result: The checkout process works correctly, and the item total matches the price in the cart. Screenshots are captured at each key step.

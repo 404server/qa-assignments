@@ -1,0 +1,35 @@
+Inventory and Cart Test Cases Description
+
+1) Inventory Page shown successfully – Checks that the inventory page loads correctly.
+Steps:
+    Open the inventory page (logged in via suite setup).
+    Verify that the inventory list is visible.
+    Verify that item images are visible.
+    Verify that item descriptions are visible.
+Result: The inventory page displays correctly with all items, images, and descriptions.
+
+2) Added to cart successfully – Checks that items can be added to the cart.
+Steps:
+    Verify that inventory items are visible.
+    Click the “Add to cart” button for the “Sauce Labs Onesie” item.
+    Verify that the shopping cart link is visible.
+    Get the number of items in the cart and check it equals 1.
+Result: The item is added to the cart successfully, and the cart counter updates correctly.
+
+3) Removed from cart successfully – Checks that items can be removed from the cart.
+Steps:
+    Verify that inventory items are visible.
+    Verify that the shopping cart link is visible.
+    Click the “Remove” button for the “Sauce Labs Onesie” item.
+    Verify that the cart counter is no longer visible.
+Result: The item is removed from the cart successfully.
+
+4) Check filters – Checks that the price filter works correctly.
+Steps:
+    Verify that the product sort dropdown is visible.
+    Click the product sort dropdown.
+    Select the option to sort by price (high to low).
+    Get the price of the first product (highest) and last product (lowest) after sorting.
+    Verify that the highest price equals HIGHEST_REAL.
+    Verify that the lowest price equals LOWEST_REAL.
+Result: The products are sorted correctly by price, and the highest and lowest prices match expected values.

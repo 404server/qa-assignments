@@ -1,0 +1,24 @@
+Login User Error Test Cases Description
+
+Cart works incorect - Check if cart updates succesfully when removing an item.
+Steps:
+    Log in to the site with an error user (Login To Site Error User).
+    Verify that the page contains inventory items.
+    Click the “Add to cart” button for the “Sauce Labs Onesie” item.
+    Verify that the shopping cart link is visible.
+    Get the number of items in the cart and verify it equals 1.
+    Click the “Remove” button for the same item.
+    Verify that the shopping cart link is still visible.
+    Log the amount to the console.
+result: The cart updates incorrectly when removing an item.
+
+Check filters – Checks that the price filter works.
+Steps:
+    Log in to the site with an error user (Login To Site Error User).
+    Verify that the product sort container element is visible.
+    Click the product sort dropdown.
+    Select the option to sort by price (highest to lowest).
+    Get the price of the first and last product after sorting.
+    Log both prices to the console.
+    Verify that the highest and lowest prices are not equal to the expected real highest and lowest values (HIGHEST_REAL and LOWEST_REAL).
+result: The filter changes the order of products, but prices do not match expected values.

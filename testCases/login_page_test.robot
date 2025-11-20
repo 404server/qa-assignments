@@ -35,7 +35,7 @@ User locked
 Password is required
     Open Browser    ${BASE_URL}   chrome
     Input Text    id=user-name    ${LOCKED_OUT_USER}
-    Input Text    id=password    ${PASSWORD}
+    Input Text    id=password    ${EMPTY_PASSWORD}
     Click Button    id=login-button
     ${error_text}=    Get Text    xpath=//*[@id="login_button_container"]/div/form/div[3]
     Should Contain    ${error_text}    ${EMPTY_PASSWORD}

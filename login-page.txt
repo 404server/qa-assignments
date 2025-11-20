@@ -1,0 +1,47 @@
+Login Test Cases Description
+
+1) Login Successful - check that a user with valid username and password can successfully log in.
+Steps:
+    Open the login page in Chrome.
+    Enter a valid username (STANDARD_USER).
+    Enter the correct password (PASSWORD).
+    Click the login button.
+    Verify that the page contains the product sort container element.
+    Close the browser.
+
+result: user is successfully logged in, and product page is displayed.
+
+2) Password is Incorrect – сhecks that login fails when an incorrect password is used.
+Steps:
+    Open the login page in Chrome.
+    Enter a valid username (STANDARD_USER).
+    Enter an incorrect password (INCORRECT_PASSWORD).
+    Click the login button.
+    Capture the error message displayed.
+    Verify that the error message contains the expected text (INCORRECT_PASSWORD_ERROR).
+    Close the browser.
+result: Login fails, and the correct error message is shown.
+
+3) User Locked – checks that a locked-out user cannot log in.
+Steps:
+    Open the login page in Chrome.
+    Enter the username of a locked-out user (LOCKED_OUT_USER).
+    Enter the correct password (PASSWORD).
+    Click the login button.
+    Capture the error message displayed.
+    Verify that the error message contains the expected text (LOCKED_OUT_USER_ERROR).
+    Close the browser.
+
+result: Login fails, and a locked-out user error message is displayed.
+
+4) password is required – checks that login fails when the password field is empty.
+Steps:
+    Open the login page in Chrome.
+    Enter a username (LOCKED_OUT_USER).
+    Leave the password field empty or enter invalid input.
+    Click the login button.
+    Capture the error message displayed.
+    Verify that the error message contains the expected text (EMPTY_PASSWORD).
+    Close the browser.
+
+result: Login fails, and a “password required” error message is displayed.
