@@ -1,13 +1,13 @@
---suite testCases.Cart Test
+--suite Login Page Test
 --variable BSTACKDEFLOCALIDENTIFIER:
 --variable BSTACKPLATFORMINDEX:2
---variable CALLER_ID:b6f6cbefaac8423bb9fc82960768686b
+--variable CALLER_ID:39664fd61d95449c8878fb2388a4bf35
 --variable PABOTLIBURI:127.0.0.1:8270
---variable PABOTEXECUTIONPOOLID:0
---variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTEXECUTIONPOOLID:2
+--variable PABOTISLASTEXECUTIONINPOOL:1
 --variable PABOTNUMBEROFPROCESSES:3
 --variable PABOTQUEUEINDEX:2
---variable PABOTLASTLEVEL:testCases.Cart Test
+--variable PABOTLASTLEVEL:
 --listener /Users/sarvarsadazov/PyCharmMiscProject/.venv/lib/python3.9/site-packages/browserstack_sdk/bstack_robot_listener.py
 --log NONE
 --report NONE
@@ -15,4 +15,4 @@
 --outputdir ./pabot_results/2
 --consolecolors off
 --consolemarkers off
-testCases/
+testCases/login_page_test.robot

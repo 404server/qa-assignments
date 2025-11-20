@@ -1,23 +1,24 @@
-2025-11-20T09:52:24Z [browserstack_sdk.__init__][INFO] - SDK run started with id: 04a931e5-fb11-4a85-b937-166b8f80148b
-2025-11-20T09:52:24Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
-2025-11-20T09:52:26Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
+2025-11-20T11:55:15Z [browserstack_sdk.__init__][INFO] - SDK run started with id: b1e26436-50bc-4789-a208-d749ed6927c7
+2025-11-20T11:55:15Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-11-20T11:55:18Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
 ==============================================================================
-testCases                                                                     
+Login Page Test                                                               
 ==============================================================================
-testCases.Cart Test                                                           
-==============================================================================
-Inventory Page shown successfully :: Проверка cart                    2025-11-20T09:52:27Z [browserstack_sdk.__init__][INFO] - Completed setup!
+Login Successful                                                      2025-11-20T11:55:18Z [browserstack_sdk.__init__][INFO] - Completed setup!
 | PASS |
 ------------------------------------------------------------------------------
-Check cart checkout                                                   2025-11-20T09:52:53Z [browserstack_sdk.__init__][INFO] - Completed setup!
+Password is incorrect                                                 2025-11-20T11:55:50Z [browserstack_sdk.__init__][INFO] - Completed setup!
 | PASS |
 ------------------------------------------------------------------------------
-testCases.Cart Test                                                   | PASS |
-2 tests, 2 passed, 0 failed
-==============================================================================
-testCases                                                             | PASS |
-2 tests, 2 passed, 0 failed
+User locked                                                           2025-11-20T11:56:07Z [browserstack_sdk.__init__][INFO] - Completed setup!
+| PASS |
+------------------------------------------------------------------------------
+Password is required                                                  2025-11-20T11:56:30Z [browserstack_sdk.__init__][INFO] - Completed setup!
+| PASS |
+------------------------------------------------------------------------------
+Login Page Test                                                       | PASS |
+4 tests, 4 passed, 0 failed
 ==============================================================================
 Output:  /Users/sarvarsadazov/PycharmProjects/qa-assignments/pabot_results/2/output.xml
-2025-11-20T09:53:25Z [browserstack_sdk.__init__][INFO] - Handling session close
-2025-11-20T09:53:26Z [browserstack_sdk.__init__][INFO] - All done!
+2025-11-20T11:56:48Z [browserstack_sdk.__init__][INFO] - Handling session close
+2025-11-20T11:56:48Z [browserstack_sdk.__init__][INFO] - All done!

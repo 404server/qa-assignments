@@ -3,8 +3,8 @@
 # =============================
 # Add your BrowserStack userName and accessKey here or set BROWSERSTACK_USERNAME and
 # BROWSERSTACK_ACCESS_KEY as env variables
-userName: sarvarsaidazov_kx1EW2
-accessKey: u8hYYAAGEiqQa5QoEA67
+userName: sarvarsaydazovv_HYr4O6
+accessKey: oXutVwzPkVQofdPgX4q1
 
 # ======================
 # BrowserStack Reporting
@@ -42,8 +42,8 @@ platforms:
   - os: Windows
     osVersion: 11
     browserName: Edge
-    browserVersion: 140.0
-    
+    browserVersion: latest
+
 # =======================
 # Parallels per Platform
 # =======================

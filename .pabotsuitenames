@@ -1,8 +1,5 @@
-datasources:380875a22d0e720adc77ea5ca5898c5051da21f5
+datasources:047e090089d07567bd84d9e4878daa7fa0564d7c
 commandlineoptions:4de05ac541bb51d8239dd80259d910fb2a2a3ec3
 suitesfrom:no-suites-from-option
-file:9d9e24e2dc98a108419d86b1544f9a359147462e
---suite testCases.Cart Test
---suite testCases.Inventory Page Test
---suite testCases.Login Page Error User Test
---suite testCases.Login Page Test
+file:8b1013a1c0886c8eb6ebdcec0b8876473d943ea3
+--suite Login Page Test
